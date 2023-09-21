@@ -5,10 +5,6 @@
 'https://github.com/Minidude140/AccumulateMessages.git
 
 
-
-
-
-
 Imports System
 
 Module MessageProgram
