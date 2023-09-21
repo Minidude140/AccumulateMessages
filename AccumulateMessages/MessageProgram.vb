@@ -20,16 +20,17 @@ Module MessageProgram
 
     Function UserMessages(Optional ByVal newMessage As String = "", Optional ByVal clear As Boolean = False) As String
         'your code here
-        Static messages As String
+        Static savedMessages As String
 
-        If clear Then
-            messages = ""
-        ElseIf newMessage <> "" Then
-            messages = messages & newMessage & vbCrLf
-        Else newMessage = ""
-            Return messages
+        'check if the clear statement is true
+        If clear Then ' if clear is true set old messages to blank
+            savedMessages = ""
+        ElseIf newMessage <> "" Then 'if new message is not empty concatenate the new message with the old
+            savedMessages = savedMessages & newMessage & vbCrLf
+        Else newMessage = "" 'if the new message is blank return the old messages
+            Return savedMessages
         End If
-        Return messages
+        Return savedMessages
     End Function
 
 
