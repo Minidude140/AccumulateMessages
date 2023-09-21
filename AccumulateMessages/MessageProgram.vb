@@ -18,14 +18,14 @@ Module MessageProgram
         Test.Auto()
     End Sub
 
-    Function UserMessages(Optional ByVal newMessage As String = " ", Optional ByVal clear As Boolean = False) As String
+    Function UserMessages(Optional ByVal newMessage As String = "", Optional ByVal clear As Boolean = False) As String
         'your code here
         Static messages As String
 
         If clear Then
             messages = ""
         ElseIf newMessage <> "" Then
-            messages = messages & newMessage & vbLf
+            messages = messages & newMessage & vbCrLf
         Else newMessage = ""
             Return messages
         End If
